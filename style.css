@@ -1,0 +1,355 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom Additions Below */
+:root,
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* mobile */
+/* general style */
+body {
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(234, 12%, 34%);
+  width: 100%;
+  height: 100vh;
+  letter-spacing: 0.05rem;
+}
+
+.container {
+  max-width: 144rem;
+  height: auto;
+  padding: 7.5rem 4rem;
+}
+
+article.four-cards {
+  display: grid;
+  grid-template-rows: repeat (5, auto);
+  gap: 2.4rem;
+}
+
+article.four-cards > section {
+  background-color: white;
+  box-shadow: 1px 19px 24px 0px rgba(217, 226, 238, 1);
+  border-radius: 0.5rem;
+}
+
+section > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 2.8rem 3rem 3rem;
+}
+
+.four-cards__container > h3 {
+  font-size: 1.8rem;
+}
+
+.four-cards__container > p {
+  font-size: 1.2rem;
+  opacity: 0.45;
+  padding-bottom: 2rem;
+}
+
+.img__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+img {
+  width: 22%;
+}
+
+/* customised style */
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+header .header__light-text {
+  font-weight: 200;
+}
+
+header .header__bold-text {
+  padding-bottom: 1.4rem;
+}
+
+header .header__description {
+  opacity: 0.45;
+  font-size: 1.409rem;
+}
+
+header .header__description span {
+  padding: 0.4rem;
+}
+
+section.four-cards__supervisor {
+  border-top: 3px solid hsl(180, 62%, 55%);
+  margin-top: 5rem;
+}
+
+section.four-cards__team-builder {
+  border-top: 3px solid hsl(0, 78%, 62%);
+}
+
+section.four-cards__karma {
+  border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+section.four-cards__calculator {
+  border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) {
+  .header__container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". header .";
+  }
+
+  article.four-cards {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(3, 35rem);
+    grid-template-rows: repeat(4, auto);
+    gap: 0;
+    grid-template-areas:
+      ". team-builder ."
+      "supervisor team-builder calculator"
+      "supervisor karma calculator"
+      ". karma .";
+    transform: translateX(10.5%);
+  }
+
+  header {
+    grid-column: 2 / 3;
+    padding-bottom: 6rem;
+    text-align: center;
+  }
+
+  section.four-cards__supervisor {
+    grid-area: supervisor;
+    margin-right: 2.5rem;
+    height: 25rem;
+  }
+
+  section.four-cards__team-builder,
+  section.four-cards__karma {
+    max-height: 25rem;
+  }
+
+  section.four-cards__team-builder {
+    grid-area: team-builder;
+  }
+
+  section.four-cards__karma {
+    grid-area: karma;
+  }
+
+  section.four-cards__calculator {
+    grid-area: calculator;
+    max-height: 25rem;
+    transform: translateY(22%);
+    margin-left: 2.5rem;
+  }
+
+  header .header__light-text {
+    font-size: 3.61rem;
+  }
+
+  header .header__bold-text {
+    font-size: 3.52rem;
+  }
+
+  header .header__description {
+    font-size: 1.255rem;
+    transform: scale(120%);
+  }
+
+  header .header__description span {
+    padding: unset;
+  }
+
+  section > div {
+    margin: 3rem 2.8rem 3rem 3rem;
+  }
+
+  .four-cards__container > h3 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .four-cards__container > p {
+    font-size: 1.3rem;
+    padding-top: 0.7rem;
+  }
+
+  section.four-cards__supervisor {
+    border-top: 5px solid hsl(180, 62%, 55%);
+  }
+
+  section.four-cards__team-builder {
+    border-top: 5px solid hsl(0, 78%, 62%);
+  }
+
+  section.four-cards__karma {
+    border-top: 5px solid hsl(34, 97%, 64%);
+  }
+
+  section.four-cards__calculator {
+    border-top: 5px solid hsl(212, 86%, 64%);
+  }
+
+  .img__container {
+    padding-top: 1.8rem;
+  }
+}
