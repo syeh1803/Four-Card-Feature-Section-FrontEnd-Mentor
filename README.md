@@ -1,13 +1,24 @@
-# Frontend Mentor - Four card feature section
+# Frontend Mentor - Four card feature section solution
 
-![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). 
 
-## The challenge
+## Overview
 
-Your challenge is to build out this feature section and get it looking as close to the design as possible.
+### The challenge
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should:
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
+
+### Screenshot
+
+![](./images/mobile-375px.png)
+![](./images/desktop-1440px.png)
+
+### Built with
+
+- Semantic HTML5 markup
+- Vanilla CSS
+- Flexbox
+- Grid
+- Mobile-first workflow
